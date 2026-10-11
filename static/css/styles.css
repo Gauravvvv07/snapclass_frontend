@@ -722,3 +722,125 @@ h4 {
         font-size: 0.95rem;
     }
 }
+
+
+/* ==========================================
+   1. HERO SECTION POSITIONING
+   ========================================== */
+
+.hero {
+    position: relative;
+}
+
+
+/* ==========================================
+   2. LAPTOP RESPONSIVENESS
+   Screens between 1201px and 1600px
+   ========================================== */
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+
+    .hero {
+        padding: 100px 24px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 4vw, 4rem);
+        max-width: 700px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero p {
+        max-width: 650px;
+        font-size: 1.1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .floating-card {
+        width: clamp(220px, 17vw, 270px);
+    }
+
+    .card-left {
+        left: 24px;
+    }
+
+    .card-right {
+        right: 24px;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+/* ==========================================
+   3. SMALL LAPTOP / TABLET RESPONSIVENESS
+   Screens between 769px and 1200px
+   ========================================== */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    .hero {
+        padding: 80px 32px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 5.5vw, 4rem);
+        max-width: 850px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        max-width: 650px;
+        margin-bottom: 36px;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn-cta {
+        padding: 18px 32px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+}
+
+
+/* ==========================================
+   4. EXTRA SAFETY FOR CONTENT OVERFLOW
+   ========================================== */
+
+.hero h1,
+.hero p,
+.hero-actions {
+    max-width: 100%;
+}
+
+.hero h1 {
+    overflow-wrap: break-word;
+}
+
+.hero-actions a {
+    max-width: 100%;
+}
+
+.floating-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
